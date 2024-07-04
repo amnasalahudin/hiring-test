@@ -14,6 +14,9 @@ const LandingPage = () => {
           <Link to="/task2">
             <Button variant="primary" className="m-2">Task 2: Employee Map</Button>
           </Link>
+          <Link to="/task1">
+            <Button variant="primary" className="m-2">Task 3: Add New Employee</Button>
+          </Link>
         </Col>
       </Row>
     </Container>
