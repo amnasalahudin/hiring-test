@@ -23,8 +23,9 @@ const Task1 = () => {
         const response = await axios.post('https://api.findofficers.com/hiring_test/get_all_employee', {
           activationCode
         });
-        console.log('Employee Data:', response.data); 
-        setEmployees(response.data); // Set the employees data
+        console.log('Employee Data:', response.data);
+        const employeeArray = Array.isArray(response.data) ? response.data : [response.data];
+        setEmployees(employeeArray); // Set the employees data
         setLoading(false);
       }
     } catch (error) {
